@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Models;
 using Microsoft.EntityFrameworkCore.Update.Internal;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Controllers;
 
@@ -44,6 +45,7 @@ public class FeeController : ControllerBase
     }
     
     [HttpPost("create")]
+    [Authorize]
     public async Task<IActionResult> CreateFee([FromBody] Fee newFee)
     {
         if (!ModelState.IsValid)

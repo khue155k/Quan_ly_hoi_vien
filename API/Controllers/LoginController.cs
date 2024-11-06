@@ -4,6 +4,9 @@ using System.Text;
 using Data;
 using Models;
 using Microsoft.EntityFrameworkCore;
+using API.Models;
+using API.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Controllers;
 
@@ -11,11 +14,15 @@ namespace Controllers;
 [Route("api/[controller]")]
 public class LoginController : ControllerBase
 {
+    private readonly JwtService _jwtService;
     private readonly AppDbContext _context;
-    public LoginController(AppDbContext context)
-        {
-            _context = context;
-        }
+
+    public LoginController(AppDbContext context, JwtService jwtService)
+    {
+        _context = context;
+        _jwtService = jwtService;
+    }
+    
     [HttpPost]
     public async Task<IActionResult> Login([FromBody] LoginDTO loginUser){
         var passEncode = GenerateSHA256(loginUser.password);
@@ -28,12 +35,16 @@ public class LoginController : ControllerBase
             return Unauthorized(new{ message = "Tài khoản hoặc mật khẩu không chính xác!"});
         }
 
+        var token = _jwtService.GenerateToken(user);
+
         return Ok(new {
             message = "Login complete!",
+            id = user.id,
             email = user.email,
-            isAdmin = user.admin == "true",
+            isAdmin = user.admin == "admin",
             name = user.name,
-            id = user.id
+            
+            token = token
         });
     }
 

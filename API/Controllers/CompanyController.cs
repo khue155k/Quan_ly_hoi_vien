@@ -4,6 +4,7 @@ using Data;
 using Models;
 using Microsoft.EntityFrameworkCore.Update.Internal;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Controllers;
 
@@ -144,6 +145,7 @@ public class CompanyController : ControllerBase
     }
 
     [HttpPut("update-status/{id}")]
+    [Authorize]
     public async Task<IActionResult> UpdateCompanyStatus(uint id, [FromBody] byte status)
     {
         Company company = await _context.Companies.FindAsync(id);

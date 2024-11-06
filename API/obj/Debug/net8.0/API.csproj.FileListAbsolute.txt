@@ -35,3 +35,12 @@ D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\obj\Debug\net8.0\refint\API.dll
 D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\obj\Debug\net8.0\API.pdb
 D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\obj\Debug\net8.0\ref\API.dll
+D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\obj\Debug\net8.0\API.sourcelink.json
+D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Angular+ASP.NET_API\Quan-ly-hoi-vien\API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
